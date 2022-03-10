@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setNewSlug } from "../../features/global";
 import {
   Box,
   Button,
@@ -10,7 +12,8 @@ import {
 } from "@chakra-ui/react";
 
 function BuatUndangan(props) {
-  const [newSlug, setNewSlug] = useState("");
+  const dispatch = useDispatch();
+  const global = useSelector((state) => state.global.value);
 
   const buatUndangan = async () => {
     const response = await fetch(
@@ -22,13 +25,13 @@ function BuatUndangan(props) {
         },
         body: JSON.stringify({
           createdAt: Date.now(),
-          slug: newSlug,
+          slug: global.newSlug,
           tema: "Tema Snow Clean",
           // Data Konten - Data Mempelai
           namaLengkapPria: "Nama Lengkap Pria",
-          namaPria: "Nama Panggilan Pria",
+          namaPria: "Pria",
           namaLengkapWanita: "Nama Lengkap Wanita",
-          namaWanita: "Nama Panggilan Wanita",
+          namaWanita: "Wanita",
 
           // Data Konten - Data Acara
           waktuAkad: "Sabtu, 20 Februari 2022",
@@ -68,7 +71,7 @@ function BuatUndangan(props) {
       }
     );
     props.fetchInvitations();
-    setNewSlug("");
+    dispatch(setNewSlug(""));
   };
 
   return (
@@ -86,15 +89,15 @@ function BuatUndangan(props) {
             bg='white'
             type='text'
             placeholder='masukkan slug'
-            value={newSlug}
-            onChange={(e) => setNewSlug(e.target.value)}
+            value={global.newSlug}
+            onChange={(e) => dispatch(setNewSlug(e.target.value))}
           />
         </FormControl>
         <Center className='pt-4'>
           <Button
             onClick={buatUndangan}
             colorScheme='teal'
-            disabled={newSlug ? false : true}
+            disabled={global.newSlug ? false : true}
           >
             Buat Undangan
           </Button>

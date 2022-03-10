@@ -19,13 +19,10 @@ export default function ThemeSnowClean({ data }) {
   const dispatch = useDispatch();
   const style = useSelector((state) => state.styleSnowClean.value);
 
-  useEffect(() => {
-    dispatch(setVarianMaroon());
-  }, []);
   return (
     <>
       <div className='relative'>
-        <LayoutModalCover />
+        <LayoutModalCover data={data} />
         <LayoutThumbnails />
         <AnimationSnowClean slideIndex={1} />
         <AnimationSnowClean slideIndex={2} />

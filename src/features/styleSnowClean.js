@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const color = {
-  primary: "#000000",
+  primary: "#152028",
   secondary: "#FFFFFF",
   tertiary: "#400000",
-  primaryBg: "bg-[#000000]",
+  primaryBg: "bg-[#152028]",
   secondaryBg: "bg-[#FFFFFF]",
   tertiaryBg: "bg-[#FF5706]",
-  primaryText: "text-[#000000]",
+  primaryText: "text-[#152028]",
   secondaryText: "text-[#FFFFFF]",
   tertiaryText: "text-[#400000]",
 };

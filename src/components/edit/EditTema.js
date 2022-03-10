@@ -106,9 +106,12 @@ function EditTema(props) {
             isDisabled={editMode ? false : true}
             onChange={(e) => setNewValue({ ...newValue, tema: e.target.value })}
           >
-            <option value='themeOne'>Tema 01</option>
-            <option value='themeTwo'>Tema 02</option>
-            <option value='themeSnowClean'>Tema Snow Clean</option>
+            <option value='Tema Snow Clean - Dark Blue'>
+              Tema Snow Clean - Dark Blue
+            </option>
+            <option value='Tema Snow Clean - Light Blue'>
+              Tema Snow Clean - Light Blue
+            </option>
           </Select>
         </FormControl>
         <ButtonEditUpdate />

@@ -16,10 +16,7 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
-import EditTema from "../edit/EditTema";
-import EditMempelai from "../edit/EditMempelai";
-import EditAcara from "../edit/EditAcara";
-import EditTeks from "../edit/EditTeks";
+import { EditTema, EditMempelai, EditAcara, EditTeks } from "../";
 
 function EditModal(props) {
   const { id, isOpen, onClose, value, setValue } = props;

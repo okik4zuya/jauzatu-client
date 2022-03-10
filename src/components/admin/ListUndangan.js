@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from "react";
-import {
-  useDisclosure,
-  Container,
-  HStack,
-  Box,
-  Center,
-  Button,
-  ButtonGroup,
-} from "@chakra-ui/react";
-import EditModal from "./EditModal";
+import React, { useState } from "react";
+import { useDisclosure, Container, HStack, Box } from "@chakra-ui/react";
+
 import ItemUndangan from "./ItemUndangan";
 
-function ListUndangan(props) {
+export default function ListUndangan(props) {
   const { invitations, fetchInvitations } = props;
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [value, setValue] = useState({});
@@ -45,6 +37,7 @@ function ListUndangan(props) {
       key={inv._id}
     />
   ));
+
   return (
     <Container className='bg-yellow-100 border-4 border-gold py-10 mt-10  rounded-lg'>
       <HStack
@@ -62,5 +55,3 @@ function ListUndangan(props) {
     </Container>
   );
 }
-
-export default ListUndangan;

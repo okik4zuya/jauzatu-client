@@ -5,6 +5,8 @@ const initialStateValue = {
   invited: "Nama Tamu",
   playing: false,
   slide: 1,
+  newSlug: "",
+  editMode: "",
 };
 
 export const globalSlice = createSlice({
@@ -25,10 +27,13 @@ export const globalSlice = createSlice({
     setSlide: (state, action) => {
       state.value.slide = action.payload;
     },
+    setNewSlug: (state, action) => {
+      state.value.newSlug = action.payload;
+    },
   },
 });
 
-export const { setLoading, setInvited, setPlaying, setSlide } =
+export const { setLoading, setInvited, setPlaying, setSlide, setNewSlug } =
   globalSlice.actions;
 
 export default globalSlice.reducer;

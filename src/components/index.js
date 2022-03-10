@@ -1,3 +1,7 @@
+//General Components
+export { default as Menubar } from "./navigation/Menubar";
+export { default as Drawer } from "./navigation/Drawer";
+
 //Admin Components
 export { default as BuatUndangan } from "./admin/BuatUndangan";
 export { default as DeleteConfirmModal } from "./admin/DeleteConfirmModal";

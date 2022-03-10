@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPlaying } from "../../../features/global";
 
-function LayoutModalCover() {
+function LayoutModalCover({ data }) {
   const dispatch = useDispatch();
   const style = useSelector((state) => state.styleSnowClean.value);
   const global = useSelector((state) => state.global.value);
@@ -21,7 +21,7 @@ function LayoutModalCover() {
     >
       <div className='text-center text-white mt-[250px] '>
         <div className={`${style.fontArt} text-[30px] sm:text-[60px] mb-4`}>
-          Omar & Hana
+          {`${data.namaPria} & ${data.namaWanita}`}
         </div>
         <div className={`sm:text-xl`}>Kepada Yth</div>
         <div className='paragraf sm:text-xl'>Bapak/Ibu/Saudara/I</div>
