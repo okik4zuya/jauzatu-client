@@ -6,7 +6,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Admin />} />
+        <Route path='/' element={<Switcher />} />
         <Route path='/admin' element={<Admin />} />
         <Route path='/:slug' element={<Switcher />} />
       </Routes>
